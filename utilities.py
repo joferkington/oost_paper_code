@@ -36,14 +36,6 @@ def plot_error_ellipse(cov, mean, nstd=2, ax=None, **kwargs):
     ax.add_artist(ellip)
     return ellip
 
-def plot_fault_strike(x0, y0, ax=None, **kwargs):
-    xyz = data.to_xyz(data.fault)
-    xy = data.to_world(xyz)
-    x, y, z = xyz.T
-    x, y = xy.T
-    strike, dip = geoprobe.utilities.points2strikeDip(x, y, z)
-    print strike, dip
-
 def plot_strike_dip(strike, dip, x0, y0, size=18, ax=None, **kwargs):
     """Plots a strike/dip tick at location x0, y0."""
     if ax is None:
@@ -128,8 +120,8 @@ def plot_plate_motion(ax=None, xy=(0, 0), time=1, ellipkwargs=None,
 def calculate_heave(slip, hor):
     """Calculates the average heave resulting from moving the given horizon
     (`hor`) by `slip` along the main fault."""
-    orig_xyz = data.to_world(data.to_xyz(hor))[::50]
-    fault = data.to_world(data.to_xyz(data.fault))
+    orig_xyz = data.world_xyz(hor)[::50]
+    fault = data.world_xyz(data.fault)
 
     func = homogeneous_simple_shear.inclined_shear
     moved_xyz = func(fault, orig_xyz, slip, data.alpha, remove_invalid=False)
