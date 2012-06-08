@@ -6,24 +6,28 @@ import numpy as np
 basedir = os.path.dirname(__file__)
 basedir = os.path.join(basedir, 'data')
 
-fault = geoprobe.swfault(basedir + 'swFaults/jdk_oos_splay_large_area_depth-mod.swf')
-vol = geoprobe.volume(basedir + 'Volumes/kumdep_1500_meter_agc.hdf')
+faultname = os.path.join(basedir, 'swFaults', 
+                         'jdk_oos_splay_large_area_depth-mod.swf')
+fault = geoprobe.swfault(faultname)
+
+volname = os.path.join(basedir, 'Volumes', 'example.hdf')
+vol = geoprobe.volume(volname)
 
 # These are in stratigraphic order from oldest to youngest
 horizon_names = [
-    'jdk_forearc_7.hzn',
-    'jdk_forearc_6.hzn',
-    'jdk_forearc_5.hzn',
-    'jdk_forearc_4.hzn',
-    'jdk_forearc_3.5.hzn',
-    'jdk_forearc_3.hzn',
-    'jdk_forearc_2.5.hzn',
-    'jdk_forearc_2.hzn',
-    'jdk_forearc_1.5.hzn',
-    'jdk_forearc_1.hzn',
+    'jdk_forearc_horizon_7.hzn',
+    'jdk_forearc_horizon_6.hzn',
+    'jdk_forearc_horizon_5.hzn',
+    'jdk_forearc_horizon_4.hzn',
+    'jdk_forearc_horizon_3.5.hzn',
+    'jdk_forearc_horizon_3.hzn',
+    'jdk_forearc_horizon_2.5.hzn',
+    'jdk_forearc_horizon_2.hzn',
+    'jdk_forearc_horizon_1.5.hzn',
+    'jdk_forearc_horizon_1.hzn',
     ]
 
-horizon_names = [basedir + 'Horizons/' + item for item in horizon_names]
+horizon_names = [os.path.join(basedir, 'Horizons', item) for item in horizon_names]
 horizons = [geoprobe.horizon(item) for item in horizon_names]
 
 gulick_names = ['7', '6', '5', '4', '3.5', '3', '2.5', '2', '1.5', '1']
