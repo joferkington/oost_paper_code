@@ -33,8 +33,8 @@ def bootstrap_results():
 
     # Use all the trial runs from horizons 7 & 8 to get an average shortening
     # and estimate error.
-    names = ['jdk_forearc_gulick_5-a-1', 'jdk_forearc_gulick_6-a', 
-             'jdk_forearc_gulick_7-a', 'jdk_forearc_gulick_8-a-1']
+    names = ['jdk_forearc_horizon_7', 'jdk_forearc_horizon_6', 
+             'jdk_forearc_horizon_5', 'jdk_forearc_horizon_4']
 
     results = np.vstack([get_result(name, group) for name in names])
 
