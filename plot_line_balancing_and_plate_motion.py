@@ -6,6 +6,8 @@ def main():
     fig = plt.figure()
     oost_short, plate_shortening = line_balancing_plot()
     fig.savefig('/data/nankai/OOSTPaper/line_balancing_bar_chart.pdf')
+    print 'Plate motion rate parallel to section'
+    print plate_motion()
 
     print 'Percentage of OOST shortening'
     print oost_short / plate_shortening
@@ -104,7 +106,7 @@ def bed_length_balancing():
 
 def bed_length_shortening():
     """Shortening estimate including volume loss."""
-    alpha = ufloat('0.3+/-0.1')
+    alpha = ufloat('0.5+/-0.1')
     heaves = bed_length_balancing()
     return heaves * (1 + alpha)
 
