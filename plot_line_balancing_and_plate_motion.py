@@ -243,7 +243,7 @@ def plot_uncertain(y, value, ax=None, hard_min=None, hard_max=None, **kwargs):
         ax = plt.gca()
 
     ax.barh(y, value.nominal_value, align='center', height=0.6, 
-            color='green', **kwargs)
+            color='gray', **kwargs)
     plot_ufloat(value, y, ax, color='black', capsize=8)
 
     if hard_min is not None:
