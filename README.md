@@ -65,28 +65,44 @@ Requires
 Key Files
 --------
 
-data.py
-: Locations of datafiles
-basic.py
-bootstrap_error.py
-data.py
-depth_conversion_simple.py
-error_ellipse.py
-fit_shear_angle.py
-forearc_detail_section.py
-grid_search.py
-interactive_basic.py
-interactive_inclined_shear.py
-invert_shear_angle.py
-plot_bootstrap_results.py
-: Plots slip over time with error ellipses. Generates 
-plot_dip_development.py
-: Plots present-day strike and dip of forearc stratigraphy. Generates
-plot_line_balancing_and_plate_motion.py
-plot_restored_horizon.py
-process_bootstrap_results.py
-restore_horizons.py
-sequential_restoration_cross_section.py
-sequential_restoration.py
-utilities.py
-visualize_solution.py
+``data.py``
+	Locations of datafiles and transform utilities.
+``basic.py``
+	A simple best-fit inversion of the amount of slip along the fault to
+	restore each horizon to horizontal.  For the paper, the results are
+	obtained from ``bootstrap_error.py``.
+``bootstrap_error.py``
+	Runs a parallel monte-carlo inversion to estimate both the amount of
+	slip and the error in the estimate. This inverts for slip 200 times for
+	each horizon, using boostrapping with replacement on the points in both
+	the horizon and fault geometries. The results are stored in
+	``bootstrap.hdf5``.
+``depth_conversion_simple.py``
+	Builds a 1D time-depth _for the fault surface beneath the forearc_ (and
+	only the fault surface beneath the forearc) using the observed fault
+	geometry in both time and depth.  (We didn't have access to the
+	velocity model for the 3D volume at the time.) This is then applied to
+	the fault surface picked from the 2D data to convert it to depth.
+	``error_ellipse.py``
+``fit_shear_angle.py``
+	Finds the best fitting shear angle for each horizon using a grid search.
+``forearc_detail_section.py``
+	Plots a detailed cross section through the uplifted forearc basin
+	stratigraphy. The base plot for Figure 3 in the paper.
+``interactive_basic.py``
+``interactive_inclined_shear.py``
+``plot_bootstrap_results.py``
+	Plots slip over time with error ellipses. Generates 
+``plot_dip_development.py``
+	Plots present-day strike and dip of forearc stratigraphy. Generates
+``plot_line_balancing_and_plate_motion.py``
+``plot_restored_horizon.py``
+``process_bootstrap_results.py``
+``restore_horizons.py``
+``sequential_restoration_cross_section.py``
+``sequential_restoration.py``
+``utilities.py``
+``visualize_solution.py``
+
+``grid_search.py``
+``invert_shear_angle.py``
