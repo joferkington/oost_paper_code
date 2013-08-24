@@ -65,7 +65,7 @@ Requires
 Key Files
 --------
 
-``data.py``
+``data.py` <https://github.com/joferkington/oost_paper_code/blob/master/data.py>`_
 	Locations of datafiles and transform utilities.
 ``basic.py``
 	A simple best-fit inversion of the amount of slip along the fault to
@@ -90,19 +90,37 @@ Key Files
 	Plots a detailed cross section through the uplifted forearc basin
 	stratigraphy. The base plot for Figure 3 in the paper.
 ``interactive_basic.py``
+        An interactive 3D visualization of the results. Displays the restored
+        position of one of the horizons and the fault geometry and lets the
+        user simulate slip on the fault.
 ``interactive_inclined_shear.py``
+        Functions used in ``interactive_basic.py``. Displays the present day
+        geometries of the fault and a horizon and lets the user simulate slip
+        on the fault.  
 ``plot_bootstrap_results.py``
-	Plots slip over time with error ellipses. Generates 
+        Plots slip over time with error ellipses. Generates the base for Figure
+        8 in the paper.
 ``plot_dip_development.py``
-	Plots present-day strike and dip of forearc stratigraphy. Generates
+        Plots present-day strike and dip of forearc stratigraphy. Generates the
+        base for Figure 9 in the paper.
 ``plot_line_balancing_and_plate_motion.py``
-``plot_restored_horizon.py``
+        Calculates shortening amounts (and errors) from line balancing and
+        plots Figures 5 and 10.
 ``process_bootstrap_results.py``
+        Calculates shortening (and errors) parallel to the section line from
+        the bootstrapping results.  
 ``restore_horizons.py``
 ``sequential_restoration_cross_section.py``
 ``sequential_restoration.py``
+        Attempt to invert for slip where the horizons are not restored
+        independently.  This gives identical results as the independent version
+        (``basic.py`` and ``bootstrap_error.py``). This demonstrates that the
+        result is not sensitive to the fact that each horizon is restored
+        independently of the one before it.
 ``utilities.py``
+        Various utility functions.
 ``visualize_solution.py``
 
 ``grid_search.py``
 ``invert_shear_angle.py``
+``plot_restored_horizon.py``
