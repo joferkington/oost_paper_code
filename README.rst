@@ -65,62 +65,62 @@ Requires
 Key Files
 --------
 
-``data.py` <https://github.com/joferkington/oost_paper_code/blob/master/data.py>`_
+`data.py <https://github.com/joferkington/oost_paper_code/blob/master/data.py>`_
 	Locations of datafiles and transform utilities.
-``basic.py``
+`basic.py <https://github.com/joferkington/oost_paper_code/blob/master/basic.py>`_
 	A simple best-fit inversion of the amount of slip along the fault to
 	restore each horizon to horizontal.  For the paper, the results are
 	obtained from ``bootstrap_error.py``.
-``bootstrap_error.py``
+`bootstrap_error.py <https://github.com/joferkington/oost_paper_code/blob/master/basic.py>`_
 	Runs a parallel monte-carlo inversion to estimate both the amount of
 	slip and the error in the estimate. This inverts for slip 200 times for
 	each horizon, using boostrapping with replacement on the points in both
 	the horizon and fault geometries. The results are stored in
 	``bootstrap.hdf5``.
-``depth_conversion_simple.py``
+`depth_conversion_simple.py <https://github.com/joferkington/oost_paper_code/blob/master/depth_conversion_simple.py>`_
 	Builds a 1D time-depth *for the fault surface beneath the forearc* (and
 	only the fault surface beneath the forearc) using the observed fault
 	geometry in both time and depth.  (We didn't have access to the
 	velocity model for the 3D volume at the time.) This is then applied to
 	the fault surface picked from the 2D data to convert it to depth.
 	``error_ellipse.py``
-``fit_shear_angle.py``
+`fit_shear_angle.py <https://github.com/joferkington/oost_paper_code/blob/master/fit_shear_angle.py>`_
 	Finds the best fitting shear angle for each horizon using a grid search.
-``forearc_detail_section.py``
+`forearc_detail_section.py <https://github.com/joferkington/oost_paper_code/blob/master/forearc_detail_section.py>`_
 	Plots a detailed cross section through the uplifted forearc basin
 	stratigraphy. The base plot for Figure 3 in the paper.
-``interactive_basic.py``
+`interactive_basic.py <https://github.com/joferkington/oost_paper_code/blob/master/interactive_basic.py>`_
         An interactive 3D visualization of the results. Displays the restored
         position of one of the horizons and the fault geometry and lets the
         user simulate slip on the fault.
-``interactive_inclined_shear.py``
+`interactive_inclined_shear.py <https://github.com/joferkington/oost_paper_code/blob/master/interactive_inclined_shear.py>`_
         Functions used in ``interactive_basic.py``. Displays the present day
         geometries of the fault and a horizon and lets the user simulate slip
         on the fault.  
-``plot_bootstrap_results.py``
+`plot_bootstrap_results.py <https://github.com/joferkington/oost_paper_code/blob/master/plot_bootstrap_results.py>`_
         Plots slip over time with error ellipses. Generates the base for Figure
         8 in the paper.
-``plot_dip_development.py``
+`plot_dip_development.py <https://github.com/joferkington/oost_paper_code/blob/master/plot_dip_development.py>`_
         Plots present-day strike and dip of forearc stratigraphy. Generates the
         base for Figure 9 in the paper.
-``plot_line_balancing_and_plate_motion.py``
+`plot_line_balancing_and_plate_motion.py <https://github.com/joferkington/oost_paper_code/blob/master/plot_line_balancing_and_plate_motion.py>`_
         Calculates shortening amounts (and errors) from line balancing and
         plots Figures 5 and 10.
-``process_bootstrap_results.py``
+`process_bootstrap_results.py <https://github.com/joferkington/oost_paper_code/blob/master/process_bootstrap_results.py>`_
         Calculates shortening (and errors) parallel to the section line from
         the bootstrapping results.  
-``restore_horizons.py``
-``sequential_restoration_cross_section.py``
-``sequential_restoration.py``
+`restore_horizons.py <https://github.com/joferkington/oost_paper_code/blob/master/restore_horizons.py>`_
+`sequential_restoration_cross_section.py <https://github.com/joferkington/oost_paper_code/blob/master/sequential_restoration_cross_section.py>`_
+`sequential_restoration.py <https://github.com/joferkington/oost_paper_code/blob/master/sequential_restoration.py>`_
         Attempt to invert for slip where the horizons are not restored
         independently.  This gives identical results as the independent version
         (``basic.py`` and ``bootstrap_error.py``). This demonstrates that the
         result is not sensitive to the fact that each horizon is restored
         independently of the one before it.
-``utilities.py``
+`utilities.py <https://github.com/joferkington/oost_paper_code/blob/master/utilities.py>`_
         Various utility functions.
-``visualize_solution.py``
+`visualize_solution.py <https://github.com/joferkington/oost_paper_code/blob/master/visualize_solution.py>`_
 
-``grid_search.py``
-``invert_shear_angle.py``
-``plot_restored_horizon.py``
+`grid_search.py <https://github.com/joferkington/oost_paper_code/blob/master/grid_search.py>`_
+`invert_shear_angle.py <https://github.com/joferkington/oost_paper_code/blob/master/invert_shear_angle.py>`_
+`plot_restored_horizon.py <https://github.com/joferkington/oost_paper_code/blob/master/plot_restored_horizon.py>`_
