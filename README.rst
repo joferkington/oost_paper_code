@@ -110,7 +110,9 @@ Key Files
         Calculates shortening (and errors) parallel to the section line from
         the bootstrapping results.  
 `restore_horizons.py <https://github.com/joferkington/oost_paper_code/blob/master/restore_horizons.py>`_
+        TODO: Description...
 `sequential_restoration_cross_section.py <https://github.com/joferkington/oost_paper_code/blob/master/sequential_restoration_cross_section.py>`_
+        Plots Figure 7 in the paper.
 `sequential_restoration.py <https://github.com/joferkington/oost_paper_code/blob/master/sequential_restoration.py>`_
         Attempt to invert for slip where the horizons are not restored
         independently.  This gives identical results as the independent version
@@ -120,7 +122,11 @@ Key Files
 `utilities.py <https://github.com/joferkington/oost_paper_code/blob/master/utilities.py>`_
         Various utility functions.
 `visualize_solution.py <https://github.com/joferkington/oost_paper_code/blob/master/visualize_solution.py>`_
+        TODO: Description...
 
 `grid_search.py <https://github.com/joferkington/oost_paper_code/blob/master/grid_search.py>`_
+        TODO: Description...
 `invert_shear_angle.py <https://github.com/joferkington/oost_paper_code/blob/master/invert_shear_angle.py>`_
+        TODO: Description...
 `plot_restored_horizon.py <https://github.com/joferkington/oost_paper_code/blob/master/plot_restored_horizon.py>`_
+        TODO: Description...
