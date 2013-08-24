@@ -1,7 +1,7 @@
 Scripts and Data for Out-of-Sequence Shortening Calculations in the Nankai Trough, Japan
 ===================
 
-Visualizations and data for <http://www.geology.wisc.edu/~jkington/Kington-OOST_Paper.pdf>.
+Visualizations and data for http://www.geology.wisc.edu/~jkington/Kington-OOST_Paper.pdf
 
 Abstract
 --------
@@ -43,7 +43,7 @@ Notes
 -----
 
 Most of the key functionality is implemented in the 
-[``fault_kinematics`` library](https://github.com/joferkington/fault_kinematics). 
+``fault_kinematics`` library: https://github.com/joferkington/fault_kinematics. 
 The scripts in this repository handle the site and project specific
 calculations and visualizations.
 
@@ -78,7 +78,7 @@ Key Files
 	the horizon and fault geometries. The results are stored in
 	``bootstrap.hdf5``.
 ``depth_conversion_simple.py``
-	Builds a 1D time-depth _for the fault surface beneath the forearc_ (and
+	Builds a 1D time-depth *for the fault surface beneath the forearc* (and
 	only the fault surface beneath the forearc) using the observed fault
 	geometry in both time and depth.  (We didn't have access to the
 	velocity model for the 3D volume at the time.) This is then applied to
