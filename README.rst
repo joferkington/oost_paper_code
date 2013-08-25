@@ -1,7 +1,15 @@
-Scripts and Data for Out-of-Sequence Shortening Calculations in the Nankai Trough, Japan
+Balanced Cross Sections, Shortening Estimates, and the Magnitude of Out-of-Sequence Thrusting in the Nankai Trough Accretionary Prism, Japan
 ===================
 
-Visualizations and data for http://www.geology.wisc.edu/~jkington/Kington-OOST_Paper.pdf
+This is a repository of data and calculations for an upcoming paper.  A draft
+of the paper is available at:
+http://www.geology.wisc.edu/~jkington/Kington-OOST_Paper.pdf
+
+The 3D inclined shear method used to restore the horizons is implemented in the 
+``fault_kinematics`` library: https://github.com/joferkington/fault_kinematics. 
+The Python scripts in this repository handle the site and project specific
+calculations and visualizations.
+
 
 Abstract
 --------
@@ -39,20 +47,12 @@ time that they were active. Finally, we propose that the activation of the
 younger, landward-most thrust in the OOSTS may be related to the nearby
 subduction of the Paleo-Zenisu ridge, which would have begun at ∼1.3-1.0 Ma.
 
-Notes
------
-
-Most of the key functionality is implemented in the 
-``fault_kinematics`` library: https://github.com/joferkington/fault_kinematics. 
-The scripts in this repository handle the site and project specific
-calculations and visualizations.
-
 Requires
 --------
 
-  * Python 2.5 - 2.7 
+  * Python 2.6 or 2.7 
   * Matplotlib >= 1.0
-  * Numpy >= 1.1
+  * Numpy >= 1.5
   * Scipy >= 0.6
   * h5py >= 2.0
 
