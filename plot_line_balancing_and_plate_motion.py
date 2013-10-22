@@ -99,14 +99,14 @@ def bed_length_balancing():
     present_length = 32
 
     # 2km error from range in restored pin lines + 10% interpretation error
-    restored_length = ufloat('82+/-10')
+    restored_length = ufloat(82, 10)
 
     shortening = restored_length - present_length
     return shortening
 
 def bed_length_shortening():
     """Shortening estimate including volume loss."""
-    alpha = ufloat('0.5+/-0.1')
+    alpha = ufloat(0.5, 0.1)
     heaves = bed_length_balancing()
     return heaves * (1 + alpha)
 
@@ -125,7 +125,7 @@ def age():
 
     # Strasser perfers an older age within this range, so we model this as
     # 2.3 +/- 0.2, but provide mins and maxs
-    avg_age = ufloat('2.3+/-0.2') # Ma
+    avg_age = ufloat(2.3, 0.2) # Ma
 
     return avg_age, min_age, max_age
 
@@ -143,7 +143,7 @@ def plate_motion():
     # for details of derivation... Uses block segment nearest study area instead
     # of derived euler pole.
     # I'm assuming that Loveless's reported errors are 2 sigma...
-    section_parallel_rate = ufloat('42.9+/-2.1')
+    section_parallel_rate = ufloat(42.9, 2.1)
     return section_parallel_rate
 
 def total_convergence():

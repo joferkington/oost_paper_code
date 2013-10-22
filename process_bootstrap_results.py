@@ -7,26 +7,26 @@ import data
 from uncertainties import ufloat
 
 def main():
-    print 'Total Shortening'
-    print shortening_magnitude()
+    print 'Total Shortening (km)'
+    print shortening_magnitude() / 1000.0
 
-    print 'Total Shortening parallel to section'
-    print shortening_parallel_to_section()
+    print 'Total Shortening parallel to section (km)'
+    print shortening_parallel_to_section() / 1000.0
 
-    print 'Total Shortening perpendicular to section'
-    print shortening_perp_to_section()
+    print 'Total Shortening perpendicular to section (km)'
+    print shortening_perp_to_section() / 1000.0
 
-    print 'At an azimuth of'
+    print 'At an azimuth of (deg)'
     print shortening_azimuth()
 
-    print 'Total heave'
-    print np.linalg.norm(heave())
+    print 'Total heave (km)'
+    print np.linalg.norm(heave()) / 1000.0
 
-    print 'Heave parallel to section...'
-    print heave_parallel_to_section()
+    print 'Heave parallel to section... (km)'
+    print heave_parallel_to_section()/ 1000.0
 
-    print 'Heave perpendicular to section...'
-    print heave_perp_to_section()
+    print 'Heave perpendicular to section... (km)'
+    print heave_perp_to_section() / 1000.0
 
 def bootstrap_results():
     f, group = load()
@@ -107,7 +107,7 @@ def section_unit_vector():
 def _parallel_to_vector(measurement, cov, direction):
     result = direction.dot(measurement)
     two_sigma = error(direction, cov)
-    return ufloat([result, two_sigma])
+    return ufloat(result, two_sigma)
 
 def _perp_vector(direction):
     dx, dy = direction
@@ -131,7 +131,7 @@ def shortening_magnitude():
 
     shortening = np.linalg.norm(mean)
     two_sigma = error(slip_dir, cov)
-    return ufloat([shortening, two_sigma])
+    return ufloat(shortening, two_sigma)
 
 def shortening_azimuth():
     mean, cov = total_shortening()
