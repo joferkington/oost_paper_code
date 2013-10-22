@@ -55,6 +55,7 @@ Requires
   * Numpy >= 1.5
   * Scipy >= 0.6
   * h5py >= 2.0
+  * Uncertainties >= 2.0
 
   * Python-geoprobe
   * <https://github.com/joferkington/fault_kinematics>
