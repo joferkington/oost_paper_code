@@ -197,3 +197,48 @@ def is_outlier(points, thresh=3.5):
 
     return modified_z_score > thresh
 
+def min_value(uncert_val):
+    """Minimum confidence interval for a ufloat quantity."""
+    return uncert_val.nominal_value - uncert_val.std_dev
+
+def max_value(uncert_val):
+    """Maximum confidence interval for a ufloat quantity."""
+    return uncert_val.nominal_value + uncert_val.std_dev
+
+def plot_uncertain(y, value, ax=None, hard_min=None, hard_max=None, **kwargs):
+    """Plots an bar with errors and optional "hard" minimums and maximums."""
+    if ax is None:
+        ax = plt.gca()
+
+    ax.barh(y, value.nominal_value, align='center', height=0.6, 
+            color='gray', **kwargs)
+    plot_ufloat(value, y, ax, color='black', capsize=8)
+
+    if hard_min is not None:
+        ax.plot(hard_min, y, 'k>')
+    if hard_max is not None:
+        ax.plot(hard_max, y, 'k<')
+
+def plot_ufloat(value, y, ax=None, axis='x', **kwargs):
+    """Plot errorbars from a ufloat quantity."""
+    if ax is None:
+        ax = plt.gca()
+    if axis == 'x':
+        return ax.errorbar(value.nominal_value, y, xerr=value.std_dev, **kwargs)
+    else:
+        return ax.errorbar(y, value.nominal_value, yerr=value.std_dev, **kwargs)
+
+def template(temp, val):
+    """
+    Format a ufloat quantity for matplotlib plotting (e.g. nice +/- signs).
+    """
+    def format_ufloat(val):
+#        return r'%0.1f$\pm$%0.1f' % (val.nominal_value, val.std_dev)
+        return r'%0.1f+/-%0.1f' % (val.nominal_value, val.std_dev)
+    if not isinstance(val, list):
+        val = [val]
+    val = [format_ufloat(item) for item in val]
+    return temp.format(*val)
+
+
+
