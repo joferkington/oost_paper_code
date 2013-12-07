@@ -101,7 +101,7 @@ def heave_perp_to_section():
     return full_heave.dot(direc)
 
 def section_unit_vector():
-    angle = np.radians(330)
+    angle = np.radians(330 - 180)
     return np.array([np.cos(angle), np.sin(angle)])
 
 def _parallel_to_vector(measurement, cov, direction):
