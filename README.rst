@@ -5,6 +5,9 @@ This is a repository of data and calculations for an upcoming paper.  A draft
 of the paper is available at:
 http://www.geology.wisc.edu/~jkington/Kington-OOST_Paper.pdf
 
+This work was also presented at the 2013 Fall AGU Meeting. The poster is available at:
+http://www.geology.wisc.edu/~jkington/2013_AGU_Poster_color_coded_reduced.pdf
+
 The 3D inclined shear method used to restore the horizons is implemented in the 
 ``fault_kinematics`` library: https://github.com/joferkington/fault_kinematics. 
 The Python scripts in this repository handle the site and project specific
