@@ -8,6 +8,9 @@ def main():
     print 'Shortening (including ductile) from bed-length'
     print bed_length_shortening()
 
+    print 'Estimated total shortening accomodated by OOSTS'
+    print oost_shortening()
+
     print 'Percentage of OOST shortening'
     print total_oost_percentage()
 
