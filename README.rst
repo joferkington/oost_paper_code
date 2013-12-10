@@ -5,6 +5,10 @@ This is a repository of data and calculations for an upcoming paper.  A draft
 of the paper is available at:
 http://www.geology.wisc.edu/~jkington/Kington-OOST_Paper.pdf
 
+This work extensively references and depends on the results of another
+unpublished (so far) study, which is available here:
+http://www.geology.wisc.edu/~jkington/Kington-OuterWedgeStructure.pdf
+
 This work was also presented at the 2013 Fall AGU Meeting. The poster is available at:
 http://www.geology.wisc.edu/~jkington/2013_AGU_Poster_color_coded_reduced.pdf
 
