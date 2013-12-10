@@ -32,7 +32,7 @@ def bed_length_balancing():
 
 def bed_length_shortening():
     """Shortening estimate including volume loss."""
-    alpha = ufloat(0.5, 0.1)
+    alpha = ufloat(0.35, 0.1)
     heaves = bed_length_balancing()
     return heaves * (1 + alpha)
 
