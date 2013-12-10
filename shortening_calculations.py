@@ -11,6 +11,9 @@ def main():
     print 'Estimated total shortening accomodated by OOSTS'
     print oost_shortening()
 
+    print 'Shortening accommodated by seaward branch of OOSTS'
+    print seaward_shortening()
+
     print 'Percentage of OOST shortening'
     print total_oost_percentage()
 
